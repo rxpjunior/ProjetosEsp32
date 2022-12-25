@@ -1,0 +1,3 @@
+https://www.dobitaobyte.com.br/como-ler-json-no-esp32/
+https://api.adviceslip.com/#endpoint-random
+https://arduinojson.org/v6/assistant/
