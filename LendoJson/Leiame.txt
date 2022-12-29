@@ -1,0 +1,3 @@
+Infomações sobre os projetos
+
+lendoJson1 - Teste de acesso a uma API que retorna um conselho e imprime no monitor Serial. Este conselho vem em um Json que é tratado no código.

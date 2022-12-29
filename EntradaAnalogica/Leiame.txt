@@ -1,0 +1,3 @@
+Informações sobre os projetos
+
+testeEntradaAnalogica1 - Testes de entrada analógica usando 2 entradas.

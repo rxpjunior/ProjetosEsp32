@@ -1,0 +1,3 @@
+Informações sobre os projetos
+
+publica1 - Publicando no Thingspeak a leitura feita em um LDR.

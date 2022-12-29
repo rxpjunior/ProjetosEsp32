@@ -1,0 +1,3 @@
+Informações sobre os projetos
+
+testeSaidaAnalogica1 - Teste de acendimento de leds usando a função ledcWrite, que substitui a analogWrite (não implementada no ESP32)
