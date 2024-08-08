@@ -40,8 +40,6 @@ void loop() {
 
     delay(500); // Espera 500 milissegundos
 
-    Serial.flush();
-
   }
 
   // Adiciona o caractere nulo ao final do array para marcar o fim da string
