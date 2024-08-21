@@ -1,0 +1,10 @@
+C:\Workspaces\Arduino\ProjetosEsp32\ComunicacaoSerialCSharp_WForm\appFormEsp32\appFormEsp32\bin\Debug\appFormEsp32.exe.config
+C:\Workspaces\Arduino\ProjetosEsp32\ComunicacaoSerialCSharp_WForm\appFormEsp32\appFormEsp32\bin\Debug\appFormEsp32.exe
+C:\Workspaces\Arduino\ProjetosEsp32\ComunicacaoSerialCSharp_WForm\appFormEsp32\appFormEsp32\bin\Debug\appFormEsp32.pdb
+C:\Workspaces\Arduino\ProjetosEsp32\ComunicacaoSerialCSharp_WForm\appFormEsp32\appFormEsp32\obj\Debug\appFormEsp32.csproj.AssemblyReference.cache
+C:\Workspaces\Arduino\ProjetosEsp32\ComunicacaoSerialCSharp_WForm\appFormEsp32\appFormEsp32\obj\Debug\appFormEsp32.Form1.resources
+C:\Workspaces\Arduino\ProjetosEsp32\ComunicacaoSerialCSharp_WForm\appFormEsp32\appFormEsp32\obj\Debug\appFormEsp32.Properties.Resources.resources
+C:\Workspaces\Arduino\ProjetosEsp32\ComunicacaoSerialCSharp_WForm\appFormEsp32\appFormEsp32\obj\Debug\appFormEsp32.csproj.GenerateResource.cache
+C:\Workspaces\Arduino\ProjetosEsp32\ComunicacaoSerialCSharp_WForm\appFormEsp32\appFormEsp32\obj\Debug\appFormEsp32.csproj.CoreCompileInputs.cache
+C:\Workspaces\Arduino\ProjetosEsp32\ComunicacaoSerialCSharp_WForm\appFormEsp32\appFormEsp32\obj\Debug\appFormEsp32.exe
+C:\Workspaces\Arduino\ProjetosEsp32\ComunicacaoSerialCSharp_WForm\appFormEsp32\appFormEsp32\obj\Debug\appFormEsp32.pdb
