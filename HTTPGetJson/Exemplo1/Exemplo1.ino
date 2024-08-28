@@ -1,3 +1,10 @@
+/*
+Fontes de pesquisa
+https://randomnerdtutorials.com/esp32-http-get-post-arduino/
+https://forum.arduino.cc/t/esp32-forecast-fail-to-get-object/1008486
+https://forum.arduino.cc/t/parsing-with-the-arduino_json-h-library/686791
+*/
+
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <Arduino_JSON.h>

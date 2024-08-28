@@ -1,3 +1,8 @@
+/*
+Fonte de pesquisa
+https://www.arduinoecia.com.br/como-usar-o-wifimanager-com-esp32-e-esp8266/
+*/
+
 //Bibliotecas
 //WIFI
 #include <DNSServer.h>
