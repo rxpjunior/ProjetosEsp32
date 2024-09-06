@@ -12,7 +12,7 @@ int lcdLinhas = 2;
 
 // Instanciar o display com seu endereço, linhas e colunas
 // No link acima é possível ver como encontrar este endereço
-LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);  
+LiquidCrystal_I2C lcd(0x27, lcdColunas, lcdLinhas);  
 
 void setup(){
   // Inicializa o LCD

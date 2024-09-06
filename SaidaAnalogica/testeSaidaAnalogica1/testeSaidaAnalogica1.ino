@@ -1,3 +1,5 @@
+// FUNCAO LEDC MUDOU NA VERSAO 3. ESTE ESBOÇO FUNCIONA APENAS EM VERSOES ANTIGAS
+
 // O numero do pino do Led
 const int ledPin = 25;  // D25 - GPIO25
 
