@@ -1,0 +1,10 @@
+C:\Workspaces\Arduino\ProjetosEsp32\WFA_ACCESS_SERIAL_ESP32\WFA_ACCESS_ESP32\bin\Debug\WFA_ACCESS_ESP32.exe.config
+C:\Workspaces\Arduino\ProjetosEsp32\WFA_ACCESS_SERIAL_ESP32\WFA_ACCESS_ESP32\bin\Debug\WFA_ACCESS_ESP32.exe
+C:\Workspaces\Arduino\ProjetosEsp32\WFA_ACCESS_SERIAL_ESP32\WFA_ACCESS_ESP32\bin\Debug\WFA_ACCESS_ESP32.pdb
+C:\Workspaces\Arduino\ProjetosEsp32\WFA_ACCESS_SERIAL_ESP32\WFA_ACCESS_ESP32\obj\Debug\WFA_ACCESS_ESP32.csproj.AssemblyReference.cache
+C:\Workspaces\Arduino\ProjetosEsp32\WFA_ACCESS_SERIAL_ESP32\WFA_ACCESS_ESP32\obj\Debug\WFA_ACCESS_ESP32.Form1.resources
+C:\Workspaces\Arduino\ProjetosEsp32\WFA_ACCESS_SERIAL_ESP32\WFA_ACCESS_ESP32\obj\Debug\WFA_ACCESS_ESP32.Properties.Resources.resources
+C:\Workspaces\Arduino\ProjetosEsp32\WFA_ACCESS_SERIAL_ESP32\WFA_ACCESS_ESP32\obj\Debug\WFA_ACCESS_ESP32.csproj.GenerateResource.cache
+C:\Workspaces\Arduino\ProjetosEsp32\WFA_ACCESS_SERIAL_ESP32\WFA_ACCESS_ESP32\obj\Debug\WFA_ACCESS_ESP32.csproj.CoreCompileInputs.cache
+C:\Workspaces\Arduino\ProjetosEsp32\WFA_ACCESS_SERIAL_ESP32\WFA_ACCESS_ESP32\obj\Debug\WFA_ACCESS_ESP32.exe
+C:\Workspaces\Arduino\ProjetosEsp32\WFA_ACCESS_SERIAL_ESP32\WFA_ACCESS_ESP32\obj\Debug\WFA_ACCESS_ESP32.pdb

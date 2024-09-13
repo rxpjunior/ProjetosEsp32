@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Workspaces\\Arduino\\ProjetosEsp32\\WFA_ACCESS_ESP32_WEBSOCKETS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36B61FE2-41F8-43E6-8669-CC35981CBE64}|WFA_ACCESS_ESP32_WEBSOCKETS\\WFA_ACCESS_ESP32_WEBSOCKETS.csproj|c:\\workspaces\\arduino\\projetosesp32\\wfa_access_esp32_websockets\\wfa_access_esp32_websockets\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36B61FE2-41F8-43E6-8669-CC35981CBE64}|WFA_ACCESS_ESP32_WEBSOCKETS\\WFA_ACCESS_ESP32_WEBSOCKETS.csproj|solutionrelative:wfa_access_esp32_websockets\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36B61FE2-41F8-43E6-8669-CC35981CBE64}|WFA_ACCESS_ESP32_WEBSOCKETS\\WFA_ACCESS_ESP32_WEBSOCKETS.csproj|C:\\Workspaces\\Arduino\\ProjetosEsp32\\WFA_ACCESS_ESP32_WEBSOCKETS\\wfa_access_esp32_websockets\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{36B61FE2-41F8-43E6-8669-CC35981CBE64}|WFA_ACCESS_ESP32_WEBSOCKETS\\WFA_ACCESS_ESP32_WEBSOCKETS.csproj|solutionrelative:wfa_access_esp32_websockets\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Workspaces\\Arduino\\ProjetosEsp32\\WFA_ACCESS_ESP32_WEBSOCKETS\\WFA_ACCESS_ESP32_WEBSOCKETS\\Form1.cs",
+              "RelativeDocumentMoniker": "WFA_ACCESS_ESP32_WEBSOCKETS\\Form1.cs",
+              "ToolTip": "C:\\Workspaces\\Arduino\\ProjetosEsp32\\WFA_ACCESS_ESP32_WEBSOCKETS\\WFA_ACCESS_ESP32_WEBSOCKETS\\Form1.cs",
+              "RelativeToolTip": "WFA_ACCESS_ESP32_WEBSOCKETS\\Form1.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwEoAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T23:01:10.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Workspaces\\Arduino\\ProjetosEsp32\\WFA_ACCESS_ESP32_WEBSOCKETS\\WFA_ACCESS_ESP32_WEBSOCKETS\\Form1.cs",
+              "RelativeDocumentMoniker": "WFA_ACCESS_ESP32_WEBSOCKETS\\Form1.cs",
+              "ToolTip": "C:\\Workspaces\\Arduino\\ProjetosEsp32\\WFA_ACCESS_ESP32_WEBSOCKETS\\WFA_ACCESS_ESP32_WEBSOCKETS\\Form1.cs [Design]",
+              "RelativeToolTip": "WFA_ACCESS_ESP32_WEBSOCKETS\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T22:49:16.304Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
