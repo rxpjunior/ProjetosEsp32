@@ -1,3 +1,10 @@
+/*
+Projeto1 Operacional:
+WiFi Manager
+Consulta HTTP API
+Escrita na tela
+*/
+
 //Bibliotecas
 //WIFI
 #include <DNSServer.h>
@@ -16,12 +23,16 @@ int pino_reset = 4;
 //URL da API
 const char* serverName = "http://api.hgbrasil.com/weather?woeid=455871&array_limit=1&fields=only_results,temp,city_name,forecast,max,min,date,rain_probability&key=416dac31";
 
-//Disparador
+//Intervalos do Disparador 
 unsigned long ultimoDisparo = 0;
 // Timer para 60 minutos (3600000)
 // Timer para 10 minutos (600000)
+// Timer para 1 minuto (60000)
 // Timer para 5 seconds (5000)
-unsigned long tempoDecorrido = 5000;
+unsigned long tempoDecorrido = 60000;
+
+// Controle para carregamento da API na inicializacao
+int controle = 1;
 
 //String que recebe o resultado da consulta a API
 String retornoConsulta;
@@ -97,6 +108,15 @@ String httpGETRequest(const char* serverName) {
 
   return payload;
 }
+//Funcao para escrever dados na tela
+void escreveNaTela(String msg1, String msg2){
+  lcd.clear();
+  delay(1000);
+  lcd.setCursor(0, 0);
+  lcd.print(msg1);
+  lcd.setCursor(0, 1);
+  lcd.print(msg2);
+}
 
 //Funcao para buscar os dados na API
 void buscaDadosApi(){
@@ -104,7 +124,7 @@ retornoConsulta = httpGETRequest(serverName);
       Serial.printf("Exibindo o retorno da consulta no formato String: ");
       Serial.println(retornoConsulta);
       //Convertendo o retorno para o formato Json
-	  JSONVar meuObjeto = JSON.parse(retornoConsulta);
+	    JSONVar meuObjeto = JSON.parse(retornoConsulta);
   
       // JSON.typeof(jsonVar) pode ser usado para pegar o tipo de uma variável
       if (JSON.typeof(meuObjeto) == "undefined") {
@@ -124,9 +144,11 @@ retornoConsulta = httpGETRequest(serverName);
       tempMin = JSON.stringify(meuObjeto["forecast"][0]["min"]);
       tempMax = JSON.stringify(meuObjeto["forecast"][0]["max"]);
 
-      msg1 = "Data:"+data+"Prob.chuva"+probChuva;
-      msg2 = "Temp. Min:"+tempMin+" Max: "+tempMax;
+      //Montando a String para exibicao no display
+      msg1 = "Prob Chuva: "+probChuva+"%";
+      msg2 = "MIN "+tempMin+"C"+" MAX "+tempMax+"C";
 
+      //Chamando a funcao para escrever na tela
       escreveNaTela(msg1, msg2);
       
       Serial.print("Chaves do Json: ");
@@ -143,20 +165,19 @@ retornoConsulta = httpGETRequest(serverName);
       Serial.println(tempMax); //O retorno é uma lista, 0 indica o indice do objeto
 }
 
-void escreveNaTela(String msg1, String msg2){
-   lcd.clear();
-   delay(500);
-   lcd.setCursor(0, 0);
-   lcd.print(msg1);
-   lcd.setCursor(0, 1);
-   lcd.print(msg2);
+void exibeMsgConfWifi(){
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Configure");
+  lcd.setCursor(0, 1);
+  lcd.print("WIFI");
 }
 
 void setup() {
   Serial.begin(115200);
   pinMode(pino_reset, INPUT);
   setupWiFi(); 
-   delay(10);
+  delay(10);
   // Inicializa o LCD
   lcd.init();
   // Liga a luz de fundo do display                      
@@ -167,7 +188,14 @@ void loop() {
   //Verifica se o botao foi pressionado e se sim reseta o Wifi para reconfiguracao
   int valor = digitalRead(pino_reset);
   if (valor == 1) {
+    exibeMsgConfWifi();
     configWiFi();
+  }
+
+  //Buscar os dados da API imediatamente ao ligar e depois bloco eh desabilitado
+  if (controle){
+    buscaDadosApi();
+    controle=0;
   }
 
   //Faz a consulta HTTP de acordo com o tempo indicado na variável tempo decorrido
@@ -176,8 +204,8 @@ void loop() {
     if(WiFi.status()== WL_CONNECTED){
       buscaDadosApi();        
     }
-    
     else {
+      exibeMsgConfWifi();
       Serial.println("WiFi Desconectado");
     }
     ultimoDisparo = millis();
