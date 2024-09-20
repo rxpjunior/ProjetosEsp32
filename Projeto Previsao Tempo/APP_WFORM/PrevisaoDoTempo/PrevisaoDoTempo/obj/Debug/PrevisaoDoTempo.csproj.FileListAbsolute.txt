@@ -1,0 +1,11 @@
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\bin\Debug\Previsaobd.mdb
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\bin\Debug\PrevisaoDoTempo.exe.config
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\bin\Debug\PrevisaoDoTempo.exe
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\bin\Debug\PrevisaoDoTempo.pdb
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\obj\Debug\PrevisaoDoTempo.csproj.AssemblyReference.cache
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\obj\Debug\PrevisaoDoTempo.Form1.resources
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\obj\Debug\PrevisaoDoTempo.Properties.Resources.resources
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\obj\Debug\PrevisaoDoTempo.csproj.GenerateResource.cache
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\obj\Debug\PrevisaoDoTempo.csproj.CoreCompileInputs.cache
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\obj\Debug\PrevisaoDoTempo.exe
+C:\Workspaces\Arduino\ProjetosEsp32\Projeto Previsao Tempo\APP_WFORM\PrevisaoDoTempo\PrevisaoDoTempo\obj\Debug\PrevisaoDoTempo.pdb
