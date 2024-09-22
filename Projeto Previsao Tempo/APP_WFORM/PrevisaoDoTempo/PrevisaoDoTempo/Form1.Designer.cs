@@ -59,6 +59,7 @@
             this.lblDadosRecebidos = new System.Windows.Forms.Label();
             this.txtDadosRecebidos = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.previsaobdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadosMeteorologicosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadosMeteorologicosBindingNavigator)).BeginInit();
@@ -113,7 +114,7 @@
             this.dadosMeteorologicosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.dadosMeteorologicosBindingNavigator.Name = "dadosMeteorologicosBindingNavigator";
             this.dadosMeteorologicosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.dadosMeteorologicosBindingNavigator.Size = new System.Drawing.Size(983, 27);
+            this.dadosMeteorologicosBindingNavigator.Size = new System.Drawing.Size(1231, 27);
             this.dadosMeteorologicosBindingNavigator.TabIndex = 0;
             this.dadosMeteorologicosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -227,7 +228,7 @@
             this.dadosMeteorologicosDataGridView.Name = "dadosMeteorologicosDataGridView";
             this.dadosMeteorologicosDataGridView.RowHeadersWidth = 51;
             this.dadosMeteorologicosDataGridView.RowTemplate.Height = 24;
-            this.dadosMeteorologicosDataGridView.Size = new System.Drawing.Size(696, 231);
+            this.dadosMeteorologicosDataGridView.Size = new System.Drawing.Size(871, 231);
             this.dadosMeteorologicosDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -299,14 +300,14 @@
             // lblDadosRecebidos
             // 
             this.lblDadosRecebidos.AutoSize = true;
-            this.lblDadosRecebidos.Location = new System.Drawing.Point(777, 31);
+            this.lblDadosRecebidos.Location = new System.Drawing.Point(194, 142);
             this.lblDadosRecebidos.Name = "lblDadosRecebidos";
             this.lblDadosRecebidos.Size = new System.Drawing.Size(0, 16);
             this.lblDadosRecebidos.TabIndex = 6;
             // 
             // txtDadosRecebidos
             // 
-            this.txtDadosRecebidos.Location = new System.Drawing.Point(714, 71);
+            this.txtDadosRecebidos.Location = new System.Drawing.Point(889, 71);
             this.txtDadosRecebidos.Multiline = true;
             this.txtDadosRecebidos.Name = "txtDadosRecebidos";
             this.txtDadosRecebidos.Size = new System.Drawing.Size(185, 344);
@@ -315,17 +316,28 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
+            this.lblStatus.ForeColor = System.Drawing.Color.Red;
             this.lblStatus.Location = new System.Drawing.Point(41, 125);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(96, 16);
             this.lblStatus.TabIndex = 8;
             this.lblStatus.Text = "Desconectado";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(898, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Dados recebidos do ESP";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 450);
+            this.ClientSize = new System.Drawing.Size(1231, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.txtDadosRecebidos);
             this.Controls.Add(this.lblDadosRecebidos);
@@ -336,6 +348,7 @@
             this.Controls.Add(this.dadosMeteorologicosBindingNavigator);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.previsaobdDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadosMeteorologicosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadosMeteorologicosBindingNavigator)).EndInit();
@@ -378,6 +391,7 @@
         private System.Windows.Forms.Label lblDadosRecebidos;
         private System.Windows.Forms.TextBox txtDadosRecebidos;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label label2;
     }
 }
 

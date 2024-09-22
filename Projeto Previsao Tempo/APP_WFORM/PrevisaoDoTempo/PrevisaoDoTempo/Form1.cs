@@ -1,7 +1,9 @@
-﻿using System;
+﻿using PrevisaoDoTempo.PrevisaobdDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Net.WebSockets;
@@ -35,16 +37,18 @@ namespace PrevisaoDoTempo
         private async void btnConectar_Click(object sender, EventArgs e)
         {
             webSocket = new ClientWebSocket(); // Inicializa uma nova instância de ClientWebSocket
-            Uri serverUri = new Uri("ws://" + txtIp.Text + ":81"); // Define o URI do servidor WebSocket, substitua pelo IP do seu ESP32
+            Uri serverUri = new Uri("ws://" + txtIp.Text + ":81"); // Define o URI do servidor WebSocket, pegando o IP cadastrado no textbox
             try
             {
                 await webSocket.ConnectAsync(serverUri, CancellationToken.None); // Tenta conectar ao servidor WebSocket de forma assíncrona
                 lblStatus.Invoke((MethodInvoker)(() => lblStatus.Text = "Conectado")); // Atualiza o lblStatus para mostrar "Conectado" na UI 
+                lblStatus.ForeColor = Color.Green; // Cor verde
                 await ReceiveMessages(); // Chama o método para receber mensagens do servidor WebSocket
             }
             catch (Exception ex) // Bloco de captura para exceções 
             {
                 lblStatus.Invoke((MethodInvoker)(() => lblStatus.Text = "Desconectado")); // Atualiza o lblStatus para mostrar "Desconectado" na UI 
+                lblStatus.ForeColor = Color.Red; //Cor vermelha
                 MessageBox.Show("Erro ao conectar: " + ex.Message); // Exibe uma mensagem de erro ao usuário
             }
         }
@@ -58,31 +62,34 @@ namespace PrevisaoDoTempo
                 {
                     var result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None); // Recebe uma mensagem do WebSocket de forma assíncrona
                     var message = Encoding.UTF8.GetString(buffer, 0, result.Count); // Converte os bytes recebidos em uma string usando UTF-8 
-                    txtDadosRecebidos.Invoke((MethodInvoker)(() => txtDadosRecebidos.AppendText($"Received: {message}\n\r"))); // Atualiza textBoxRecebidas na UI para mostrar a mensagem recebida
-                    int numeroLDR;
+                    String aux1 = message.ToString(); // Variavel auxiliar para conversao dos dados recebibos em String
+                    txtDadosRecebidos.Invoke((MethodInvoker)(() => txtDadosRecebidos.AppendText($"Received: {aux1}\n\r"))); // Atualiza textBoxRecebidas na UI para mostrar a mensagem recebida
+                    String[] valoresObtidos = aux1.Split(','); // Separando a String atraves da virgula
+                    int aux2;
+
                     // Tenta converter a string para um número inteiro 
-                    //bool ehNumeroInteiro = int.TryParse(message.ToString(), out numeroLDR); alteradoX
+                   bool ehNumeroInteiro = (int.TryParse(valoresObtidos[0], out aux2) && int.TryParse(valoresObtidos[1], out aux2) && int.TryParse(valoresObtidos[2], out aux2)); 
                     //se for número grava no Banco de dados 
-                    if (true) //ehNumeroInteiro alteradoX
+                    if (ehNumeroInteiro) //ehNumeroInteiro 
                     {
-                        Grava_Dados_Recebidos_do_LDR(message.ToString());
+                        Grava_Dados_Recebidos(valoresObtidos);
                     }
 
                 }
                 catch (Exception ex) // Bloco de captura para exceções (erros) 
                 {
                     lblStatus.Invoke((MethodInvoker)(() => lblStatus.Text = "Desconectado")); // Atualiza o lblStatus para mostrar "Desconectado" na UI 
-                    MessageBox.Show("Erro ao receber mensagem: " + ex.Message);
-                    // Exibe uma mensagem de erro ao usuário 
+                    MessageBox.Show("Erro ao receber mensagem: " + ex.Message);  // Exibe uma mensagem de erro ao usuário 
+
                 }
             }
         }
-        void Grava_Dados_Recebidos_do_LDR(string valorLDR)
+        void Grava_Dados_Recebidos(String[] valoresObtidos)
         {
-            if (valorLDR != "")
-            {/*
+            if (valoresObtidos[0] != "")
+            {
                 //cria o comando INSERT para adicionar uma nova linha no Banco de dados
-                dadosMeteorologicosTableAdapter.Adapter.InsertCommand.CommandText = "INSERT INTO LeituraLDR (DataHOra, ValorSensor) VALUES ('" + DateTime.Now + "'," + valorLDR + ")";
+                dadosMeteorologicosTableAdapter.Adapter.InsertCommand.CommandText = "INSERT INTO dadosMeteorologicos (Data, ProbChuva, TempMin, TempMax) VALUES ('" + DateTime.Now + "', '"+ valoresObtidos[0] + "','" + valoresObtidos[1] + "','" + valoresObtidos[2] + "')";
                 //conectar com o banco 
                 dadosMeteorologicosTableAdapter.Connection.Open();
                 //executar o comando INSERT 
@@ -92,19 +99,18 @@ namespace PrevisaoDoTempo
                 //testar se inseriu 
                 if (deuCerto > 0)
                 {
-                    lblDadosRecebidos.Text = "Recebeu dados do ESP32, com valor: " + valorLDR + ", em: " + DateTime.Now;
-                    // TODO: esta linha de código carrega dados na tabela 'meuBancodeDadosDataSet.LeituraLDR'.Você pode movê-la ou removê-la conforme necessário.
+                    lblDadosRecebidos.Text = "Recebeu dados do ESP32, com valor: " + valoresObtidos + ", em: " + DateTime.Now;
+                    // TODO: esta linha de código carrega dados na tabela.
                     this.dadosMeteorologicosTableAdapter.Fill(this.previsaobdDataSet.dadosMeteorologicos);
                 }
-                */
-                MessageBox.Show(valorLDR);
                 
             }
         }
 
-
-
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.dadosMeteorologicosTableAdapter.Fill(this.previsaobdDataSet.dadosMeteorologicos);
+        }
     }
 }
     
